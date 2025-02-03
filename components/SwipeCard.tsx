@@ -62,7 +62,7 @@ const SwipeStack = ({ swipeAction, onSwipeEnd, cards }: SwipeStackProps) => {
         remainingCards.map((card, index) => (
           <motion.div
             key={card.id}
-            className="absolute w-[300px] h-[400px] flex justify-center items-center"
+            className="absolute w-[300px] h-[400px] shadow-lg flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const SwipeStack = ({ swipeAction, onSwipeEnd, cards }: SwipeStackProps) => {
             }}
           >
             <motion.div
-              className="w-full h-full bg-white  rounded-2xl overflow-hidden flex flex-col items-center justify-center"
+              className="w-full h-full bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col items-center justify-center"
               drag
               dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
               onDragEnd={(event, info) => handleDragEnd(event, info, card)}

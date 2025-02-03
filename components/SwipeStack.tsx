@@ -79,7 +79,7 @@ const SwipeStack = ({ swipeAction, onSwipeEnd, cards }: SwipeStackProps) => {
         >
           {/* Draggable card */}
           <motion.div
-            className="w-full h-full bg-white  rounded-2xl overflow-hidden flex flex-col items-center justify-center"
+            className="w-full h-full bg-card shadow-sm rounded-2xl overflow-hidden flex flex-col items-center justify-center border-border border-1"
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             onDragEnd={(event, info) => handleDragEnd(event, info, card)}
@@ -87,7 +87,7 @@ const SwipeStack = ({ swipeAction, onSwipeEnd, cards }: SwipeStackProps) => {
           >
             <img src={card.image} alt={card.name} className="w-full h-3/4 object-cover" />
             <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold">{card.name}</h3>
+              <h3 className="text-lg font-semibold text-foreground">{card.name}</h3>
             </div>
           </motion.div>
         </motion.div>

@@ -1,0 +1,25 @@
+<main className="flex flex-col items-center justify-center min-h-screen gap-y-10 jun-header">
+        <div className="flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold text-foreground">EatTogether</h1>
+        <p className="mt-2 text-muted-foreground">
+          Find your next meal with friends!
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col mb-24 items-center justify-center gap-y-5">
+          <Link href="/joinroom">
+            <button className="px-6 py-2 bg-primary text-accent rounded-lg">
+              Join Room
+            </button>
+          </Link>
+
+          <button className="px-6 py-2 text-muted-foreground rounded-lg">
+            Create Room
+          </button>
+        </div>
+
+        <div>
+          <ThemeToggle />
+        </div>
+      </div>
+    </main>
